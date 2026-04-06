@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR, Noto_Serif_KR, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = "https://highendgym.vercel.app"; // ← 배포 도메인으로 교체
+const siteUrl = "https://highendgym-landing-v2.vercel.app";
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"],

@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://highendgym.vercel.app",
+      url: "https://highendgym-landing-v2.vercel.app",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
