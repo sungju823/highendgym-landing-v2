@@ -94,7 +94,9 @@ export const metadata: Metadata = {
   category: "fitness",
   verification: {
     // google: "구글서치콘솔 인증코드",
-    // naver: "네이버서치어드바이저 인증코드",
+    other: {
+      "naver-site-verification": "367fe267a7da06cec509dae0d43dc73384169ab2",
+    },
   },
 };
 
