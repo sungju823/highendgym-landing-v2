@@ -1,26 +1,13 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR, Noto_Serif_KR, Playfair_Display } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://highendgym-landing-260406.vercel.app";
 
-const notoSansKR = Noto_Sans_KR({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const notoSerifKR = Noto_Serif_KR({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["400", "600", "700"],
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
+  variable: "--font-montserrat",
+  weight: ["400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -108,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={`${notoSansKR.variable} ${notoSerifKR.variable} ${playfairDisplay.variable} h-full antialiased`}
+      className={`${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-navy text-cream">
         {children}

@@ -13,7 +13,7 @@ export default function AuthoritySection() {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="font-[family-name:var(--font-serif)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
+            <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
               숫자가 말합니다.
             </h2>
             <GoldDivider className="mb-6" />
@@ -44,14 +44,14 @@ export default function AuthoritySection() {
         <ScrollReveal>
           <div className="bg-navy border-2 border-gold/30 rounded-xl p-6 md:p-10 mb-16 max-w-2xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-24 h-24 rounded-full bg-gold/20 flex items-center justify-center text-gold text-3xl font-bold font-[family-name:var(--font-display)] flex-shrink-0">
+              <div className="w-24 h-24 rounded-full bg-gold/20 flex items-center justify-center text-gold text-3xl font-bold font-[family-name:var(--font-montserrat)] flex-shrink-0">
                 A
               </div>
               <div className="text-center md:text-left">
                 <h3 className="text-cream font-bold text-xl mb-1">
                   안성주 대표
                 </h3>
-                <p className="text-gold text-sm mb-3 font-[family-name:var(--font-maru)]">
+                <p className="text-gold text-sm mb-3 font-[family-name:var(--font-gmarket)]">
                   유일무이한, 책 쓰는 운동 사업가
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">

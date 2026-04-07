@@ -2,22 +2,51 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+/* Pretendard */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+/* SB Aggro */
 @font-face {
-  font-family: "MaruBuri";
-  src: url("/fonts/MaruBuri-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "SB Aggro";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff") format("woff");
+  font-weight: 300;
   font-display: swap;
 }
+@font-face {
+  font-family: "SB Aggro";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SB Aggro";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Gmarket Sans */
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: "Pretendard", -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: "SB Aggro", "Gmarket Sans", sans-serif;
 
   --color-navy: #0D1B2A;
   --color-navy-light: #162232;
@@ -65,9 +94,9 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  --font-serif: "Noto Serif KR", "Playfair Display", serif;
-  --font-display: "Playfair Display", "Noto Serif KR", serif;
-  --font-maru: "MaruBuri", "Noto Serif KR", serif;
+  --font-serif: "SB Aggro", "Gmarket Sans", sans-serif;
+  --font-display: "Montserrat", "Gmarket Sans", sans-serif;
+  --font-gmarket: "Gmarket Sans", "Pretendard", sans-serif;
 }
 
 :root {

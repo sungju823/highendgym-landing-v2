@@ -61,7 +61,7 @@ export default function CtaSection() {
       <div className="relative z-10 max-w-xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className="font-[family-name:var(--font-serif)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
+            <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
               오늘, 단 한 가지만
               <br />
               결정하세요.

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-[family-name:var(--font-display)] text-gold text-lg font-bold italic mb-3">
+            <h3 className="font-[family-name:var(--font-montserrat)] text-gold text-lg font-bold italic mb-3">
               HIGHENDGYM
             </h3>
             <p className="text-cream/40 text-sm leading-relaxed">

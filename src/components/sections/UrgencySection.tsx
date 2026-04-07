@@ -48,7 +48,7 @@ export default function UrgencySection() {
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="font-[family-name:var(--font-serif)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
+            <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
               당신은 지금 이 순간에도
               <br />
               몸이 변하고 있습니다.
@@ -67,7 +67,7 @@ export default function UrgencySection() {
         {/* Urgency block */}
         <ScrollReveal>
           <div className="bg-navy-light border border-gold/30 rounded-xl p-8 mb-12 text-center">
-            <p className="text-cream/80 text-base md:text-lg font-[family-name:var(--font-maru)] mb-6 leading-relaxed">
+            <p className="text-cream/80 text-base md:text-lg font-[family-name:var(--font-gmarket)] mb-6 leading-relaxed">
               운동을 시작하기에 가장 좋은 날은{" "}
               <span className="text-gold font-bold">어제</span>였습니다.
               <br />

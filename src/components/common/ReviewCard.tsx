@@ -41,7 +41,7 @@ export default function ReviewCard({
             </Badge>
           </div>
         </div>
-        <p className="text-cream/80 text-sm leading-relaxed mb-4 font-[family-name:var(--font-maru)]">
+        <p className="text-cream/80 text-sm leading-relaxed mb-4 font-[family-name:var(--font-gmarket)]">
           &ldquo;{quote}&rdquo;
         </p>
         <div className="border-t border-gold/10 pt-3">

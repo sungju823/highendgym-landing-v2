@@ -26,7 +26,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <a
           href="#"
-          className="font-[family-name:var(--font-display)] text-xl font-bold text-gold italic tracking-wide"
+          className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-gold italic tracking-wide"
         >
           HIGHENDGYM
         </a>

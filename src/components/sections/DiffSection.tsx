@@ -41,8 +41,8 @@ export default function DiffSection() {
             <Badge className="bg-gold/10 text-gold border-gold/30 mb-6 text-xs tracking-wider">
               회원 수 제한 운영
             </Badge>
-            <h2 className="font-[family-name:var(--font-serif)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
-              <span className="font-[family-name:var(--font-display)] italic text-gold">
+            <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
+              <span className="font-[family-name:var(--font-montserrat)] italic text-gold">
                 HIGHENDGYM
               </span>
               은
@@ -89,7 +89,7 @@ export default function DiffSection() {
           <div className="bg-navy border border-gold/20 rounded-xl p-4 md:p-8">
             <h3 className="text-center text-cream font-semibold text-lg mb-6">
               일반 헬스장 vs{" "}
-              <span className="text-gold font-[family-name:var(--font-display)] italic">
+              <span className="text-gold font-[family-name:var(--font-montserrat)] italic">
                 HIGHENDGYM
               </span>
             </h3>

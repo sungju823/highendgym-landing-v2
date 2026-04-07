@@ -41,7 +41,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-[family-name:var(--font-serif)] text-3xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
+          className="font-[family-name:var(--font-heading)] text-3xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
         >
           당신이 운동을 포기한 건,
           <br />
