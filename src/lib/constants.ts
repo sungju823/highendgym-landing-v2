@@ -1,161 +1,153 @@
 export const BRAND = {
   name: "HIGHENDGYM",
-  nameKr: "하이엔드짐",
-  founder: "안성주",
-  founderTitle: "유일무이한, 책 쓰는 운동 사업가",
+  nameKr: "하이엔드짐 헬스&PT 왕십리점",
+  slogan: "당신이 경험하게 될 하이엔드 트레이닝 서비스",
   instagram: {
     personal: "https://www.instagram.com/cap_ahnmerica",
-    dongil: "https://www.instagram.com/highendgym_gang",
-    suyu: "https://www.instagram.com/highendgym_suyu",
+    wangsimni: "https://www.instagram.com/highendgym_wang",
   },
   blog: "https://m.blog.naver.com/highend_fit",
 } as const;
 
 export const PROBLEMS = [
   {
-    icon: "🏚️",
-    title: "장비 과밀",
-    description: "피크타임엔 러닝머신조차 줄을 서야 합니다",
+    icon: "😶",
+    title: "아무도 알려주지 않는다",
+    description:
+      "등록 후 기구 사용법을 물어봐야 하는데, 먼저 다가오는 사람이 없습니다",
   },
   {
-    icon: "🤷",
-    title: "방임형 운영",
-    description: "등록 후 아무도 당신에게 말을 걸지 않습니다",
+    icon: "👀",
+    title: "시선이 신경 쓰인다",
+    description:
+      "헬창들 사이에서 혼자 어색하게 서 있는 그 느낌",
   },
   {
-    icon: "📉",
-    title: "획일적 프로그램",
-    description: "누구에게나 같은 루틴, 결과가 다를 수 없습니다",
+    icon: "⏳",
+    title: "피크타임엔 자리가 없다",
+    description:
+      "원하는 기구 앞에서 기다리다 그냥 가게 됩니다",
   },
   {
-    icon: "🪞",
-    title: "낮은 동기부여 환경",
-    description: "지저분한 탈의실, 낡은 장비, 의욕을 갉아먹는 공간",
+    icon: "📋",
+    title: "내 몸에 맞는 운동이 뭔지 모른다",
+    description:
+      "유튜브 영상대로 해봤는데 왜 안 되는지도 모릅니다",
   },
 ] as const;
 
 export const COMPARISON = [
   {
-    category: "피크타임 대기",
-    general: "10~30분",
-    highend: "없음 (회원 수 제한)",
+    category: "첫 방문 안내",
+    general: "없거나 형식적",
+    highend: "트레이너가 직접 기구 사용법 안내",
   },
   {
-    category: "트레이너 자격",
-    general: "생활스포츠지도사",
-    highend: "의무 고급 자격 + 정기 심사",
+    category: "피크타임 혼잡",
+    general: "매우 혼잡",
+    highend: "회원 수 제한으로 쾌적 유지",
   },
   {
-    category: "프로그램 방식",
-    general: "획일적",
-    highend: "1:1 맞춤 분석 기반",
+    category: "분위기",
+    general: "고강도·경쟁적",
+    highend: "편안하고 집중된 분위기",
   },
   {
-    category: "공간 분리",
-    general: "없음",
-    highend: "PT존 / 자유운동존 / 리커버리존",
+    category: "트레이너 접근성",
+    general: "PT 등록 후에만",
+    highend: "시설 회원도 질문 가능",
   },
   {
-    category: "장비 유지보수",
+    category: "공간 청결도",
     general: "불규칙",
-    highend: "주간 점검 의무화",
+    highend: "매일 정기 청소·관리",
   },
 ] as const;
 
 export const PROCESS_STEPS = [
   {
     number: 1,
-    icon: "📋",
-    title: "무료 상담 예약",
-    description: "온라인 또는 현장 방문 (15분)",
+    icon: "📝",
+    title: "설문지 작성",
+    description: "1분이면 됩니다. 이름·연락처·목표만 입력하면 OK",
   },
   {
     number: 2,
-    icon: "🧬",
-    title: "체성분 & 자세 분석",
-    description: "전문 측정 장비로 기초 데이터 수집",
+    icon: "📞",
+    title: "담당자 연락",
+    description: "작성 후 24시간 내 트레이너가 직접 연락드립니다",
   },
   {
     number: 3,
-    icon: "🗺️",
-    title: "맞춤 운동 설계",
-    description: "목표 / 생활패턴 기반 루틴 수립",
+    icon: "🚪",
+    title: "무료 방문 상담",
+    description: "부담 없이 공간을 먼저 경험해보세요 (구매 강요 없음)",
   },
   {
     number: 4,
     icon: "💪",
-    title: "트레이닝 시작",
-    description: "1:1 or 자유운동 병행",
-  },
-  {
-    number: 5,
-    icon: "📊",
-    title: "월간 리포트",
-    description: "데이터 기반 피드백 및 재설계",
+    title: "나만의 루틴으로 시작",
+    description: "시설만 이용할지, PT와 함께할지 그때 결정하면 됩니다",
   },
 ] as const;
 
 export const STATS = [
-  { label: "PT 완주율", value: 94, suffix: "%" },
-  { label: "재등록률", value: 87, suffix: "%" },
-  { label: "평균 체중 감량 (3개월)", value: 8.3, suffix: "kg", decimal: true },
-  { label: "회원 만족도", value: 4.9, suffix: "/5.0", decimal: true },
+  { label: "시설 이용권 재등록률", value: 85, suffix: "%" },
+  { label: "회원 평균 만족도", value: 90, suffix: "%" },
+  { label: "PT 완주율", value: 95, suffix: "%" },
 ] as const;
 
 export const REVIEWS = [
   {
-    name: "김○○",
-    age: 34,
-    job: "직장인",
-    badge: "PT 40회 회원",
+    reviewer: "운동 목적: 체형 개선",
+    badge: "PT고객 전용 리뷰",
     quote:
-      "처음엔 그냥 살 빼려고 왔는데, 6개월 만에 체지방 12% 줄이고 삶의 방식이 바뀌었습니다.",
-    result: "체지방 28% → 16%",
+      "선생님 수업이 체계적이고 정말 꼼꼼하세요. 운동을 하면서 주변에서 체형 변화를 알아볼 정도로 효과를 느껴서 너무 만족스러웠고, 앞으로도 정준이 쌤께 계속 PT 받으려구 따라온거에요!! 시설도 확장 이전해서 환경까지 더 좋아지고 기구도 더 많아져서 엄청 기대됩니닷♥ 왕십리나 한양대 근처에서 PT 고민 중이라면 하이엔드 PT 적극 추천드립니다!! 😊",
+    highlight: "운동을 하면서 주변에서 체형 변화를 알아볼 정도로 효과를 느껴서 너무 만족스러웠고,",
+    image: "/images/reviews/review-1.png",
   },
   {
-    name: "이○○",
-    age: 28,
-    job: "프리랜서",
-    badge: "6개월 회원",
+    reviewer: "운동 목적: 근육량 증가",
+    badge: "PT고객 전용 리뷰",
     quote:
-      "다른 헬스장에서 3번 실패했는데, 여기서는 트레이너가 매주 피드백을 줘서 꾸준히 할 수 있었어요.",
-    result: "체중 -11kg",
+      "재희쌤 덕분에 운동하는 즐거움을 찾아가고있어요! 처음 PT를 시작할 때 걱정이 많았는데, 단순한 반복 운동이 아니라 제 체형과 컨디션에 맞춰서 움직임을 하나하나 정확하게 짚어주셔서 큰 도움이 됩니다! 뿐만 아니라 초보자의 눈높이에 맞춰 쉽게 설명해 주셔서, 자극부위를 놓치지 않으며 운동하고 있습니다. 덕분에 다음날 몸의 변화를 바로 느낄수있고, 그래서 더욱 성취감이 생기는 것 같아요..! 혼자서 운동하기 힘드셨던 분들 저처럼 좋은 쌤만나 건강해지시길요><",
+    highlight: "뿐만 아니라 초보자의 눈높이에 맞춰 쉽게 설명해 주셔서, 자극부위를 놓치지 않으며 운동하고 있습니다.",
+    image: "/images/reviews/review-2.png",
   },
   {
-    name: "박○○",
-    age: 41,
-    job: "사업가",
-    badge: "PT 60회 회원",
+    reviewer: "운동 목적: 다이어트",
+    badge: "PT고객 전용 리뷰",
     quote:
-      "시설도 좋지만, 진짜 다른 건 관리 시스템입니다. 월간 리포트 받으면서 동기부여가 확실히 됩니다.",
-    result: "근육량 +4.2kg",
+      "확장이전한 센터라 시설이 더 쾌적하고 운동하기 정말 좋았습니다. 무엇보다 트레이너님이 체형과 움직임을 꼼꼼하게 봐주시고 그에 맞게 운동을 알려주셔서 운동할 때 자극이 확실히 다르게 느껴졌어요. 단순히 기구 사용법만 알려주는 게 아니라 왜 이 운동을 해야 하는지까지 설명해주셔서 이해도 잘 되고 꾸준히 운동하고 싶은 동기부여도 많이 됩니다. 추천합니다!",
+    highlight: "단순히 기구 사용법만 알려주는 게 아니라 왜 이 운동을 해야 하는지까지 설명해주셔서 이해도 잘 되고 꾸준히 운동하고 싶은 동기부여도 많이 됩니다.",
+    image: "/images/reviews/review-3.png",
   },
 ] as const;
 
 export const FAQ_ITEMS = [
   {
-    question: "운동 경험이 없어도 괜찮나요?",
+    question: "운동 경험이 전혀 없어도 되나요?",
     answer:
-      "물론입니다. 오히려 처음 시작하시는 분들이 올바른 자세와 루틴을 배우기에 가장 좋은 환경입니다. 첫 상담에서 현재 체력 수준을 정확히 분석해드립니다.",
+      "물론입니다. 오히려 처음 오시는 분들을 위한 안내가 잘 되어 있습니다. 첫 방문 시 트레이너가 기구 사용법을 직접 안내해드립니다.",
   },
   {
-    question: "언제부터 시작할 수 있나요?",
+    question: "PT 등록을 강요하진 않나요?",
     answer:
-      "상담 예약 후 빠르면 당일, 늦어도 2~3일 내에 시작 가능합니다. 체성분 분석과 맞춤 프로그램 설계까지 첫 방문 시 모두 진행됩니다.",
+      "전혀 없습니다. 시설 이용만으로도 충분히 환영합니다. PT는 본인이 원하실 때 상담 요청하시면 됩니다.",
   },
   {
-    question: "PT는 필수인가요?",
+    question: "설문지 작성하면 바로 연락이 오나요?",
     answer:
-      "아닙니다. 시설만 이용하는 회원권도 있습니다. 다만 처음 2주간의 오리엔테이션 PT는 모든 회원에게 무료로 제공됩니다.",
+      "네, 24시간 내로 담당 트레이너가 직접 문자 또는 전화로 연락드립니다.",
   },
   {
-    question: "중간에 그만두면 환불이 되나요?",
+    question: "무료 방문 상담 후 꼭 등록해야 하나요?",
     answer:
-      "네, 소비자 보호법에 따라 잔여 기간/횟수에 대해 환불이 가능합니다. 상세한 환불 정책은 상담 시 안내드립니다.",
+      "아닙니다. 공간을 직접 보시고 결정하셔도 됩니다. 어떤 부담도 드리지 않습니다.",
   },
   {
-    question: "회원 수 제한이 실제로 있나요?",
+    question: "여성 회원도 편하게 이용할 수 있나요?",
     answer:
-      "네, 쾌적한 운동 환경 유지를 위해 지점별 회원 수를 엄격히 제한합니다. 현재 잔여 슬롯은 상담 시 확인 가능합니다.",
+      "네, 현재 여성 회원 비율이 더 높습니다. 성별 구분 없이 편안하게 이용 가능한 환경을 유지하고 있습니다.",
   },
 ] as const;

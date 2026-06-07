@@ -3,19 +3,20 @@
 // ============================================
 //
 // [설정 방법]
-// 1. Google Sheets에서 "확장 프로그램" → "Apps Script" 클릭
-// 2. 이 코드를 전체 복사해서 붙여넣기
-// 3. "배포" → "새 배포" 클릭
-// 4. 유형: "웹 앱" 선택
-// 5. 실행 계정: "나" / 액세스 권한: "모든 사용자"
-// 6. "배포" 클릭 → 생성된 URL을 복사
-// 7. 복사한 URL을 CtaSection.tsx의 APPS_SCRIPT_URL에 붙여넣기
+// 1. 구글시트( https://docs.google.com/spreadsheets/d/gmzLVfK0MWqmUkrVhMfBTP5s5Z2jcCJ2M09l8D3jSs )를 열기
+// 2. "확장 프로그램" → "Apps Script" 클릭
+// 3. 이 코드를 전체 복사해서 붙여넣기
+// 4. "배포" → "새 배포" 클릭
+// 5. 유형: "웹 앱" 선택
+// 6. 실행 계정: "나" / 액세스 권한: "모든 사용자"
+// 7. "배포" 클릭 → 생성된 URL을 복사
+// 8. 복사한 URL을 CtaSection.tsx의 APPS_SCRIPT_URL에 붙여넣기
 //
 // [시트 헤더 자동 생성]
 // 첫 제출 시 자동으로 헤더가 생성됩니다.
 // ============================================
 
-const SHEET_NAME = "시트1"; // 시트 탭 이름 (기본값)
+const SHEET_NAME = "시트1";
 
 function doPost(e) {
   try {
@@ -34,12 +35,14 @@ function doPost(e) {
         "접수일시",
         "이름",
         "연락처",
-        "관심 프로그램",
+        "방문 목적",
+        "운동 경험",
+        "하고 싶은 말",
         "상태",
       ]);
 
       // 헤더 스타일링
-      const headerRange = sheet.getRange(1, 1, 1, 5);
+      const headerRange = sheet.getRange(1, 1, 1, 7);
       headerRange.setFontWeight("bold");
       headerRange.setBackground("#0D1B2A");
       headerRange.setFontColor("#B89A5E");
@@ -48,16 +51,24 @@ function doPost(e) {
       sheet.setColumnWidth(1, 180); // 접수일시
       sheet.setColumnWidth(2, 100); // 이름
       sheet.setColumnWidth(3, 140); // 연락처
-      sheet.setColumnWidth(4, 160); // 관심 프로그램
-      sheet.setColumnWidth(5, 100); // 상태
+      sheet.setColumnWidth(4, 140); // 방문 목적
+      sheet.setColumnWidth(5, 120); // 운동 경험
+      sheet.setColumnWidth(6, 250); // 하고 싶은 말
+      sheet.setColumnWidth(7, 100); // 상태
     }
 
-    // 관심 프로그램 한글 변환
-    const goalMap = {
-      facility: "시설 이용 (자유운동)",
-      pt: "PT 프로그램",
-      combo: "통합 (시설 + PT)",
-      consulting: "비즈니스 컨설팅",
+    // 방문 목적 한글 변환
+    const purposeMap = {
+      facility: "시설만 이용",
+      pt: "PT도 고려",
+      undecided: "아직 모름",
+    };
+
+    // 운동 경험 한글 변환
+    const experienceMap = {
+      none: "없음",
+      under1year: "1년 미만",
+      over1year: "1년 이상",
     };
 
     // 데이터 추가
@@ -71,16 +82,16 @@ function doPost(e) {
       timestamp,
       data.name || "",
       data.phone || "",
-      goalMap[data.goal] || data.goal || "",
+      purposeMap[data.purpose] || data.purpose || "",
+      experienceMap[data.experience] || data.experience || "",
+      data.message || "",
       "신규",
     ]);
 
-    // 성공 응답
     return ContentService.createTextOutput(
       JSON.stringify({ status: "success", message: "접수 완료" })
     ).setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
-    // 에러 응답
     return ContentService.createTextOutput(
       JSON.stringify({ status: "error", message: error.toString() })
     ).setMimeType(ContentService.MimeType.JSON);

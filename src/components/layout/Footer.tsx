@@ -1,47 +1,55 @@
-import { BRAND } from "@/lib/constants";
-
 export default function Footer() {
   return (
     <footer className="bg-navy-dark border-t border-white/5 py-12 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-[family-name:var(--font-montserrat)] text-gold text-lg font-bold italic mb-3">
+            <h3 className="font-[family-name:var(--font-heading)] text-gold text-lg font-bold italic mb-3">
               HIGHENDGYM
             </h3>
-            <p className="text-cream/40 text-sm leading-relaxed">
-              유일무이한, 책 쓰는 운동 사업가의
+            <p className="text-white text-sm leading-relaxed">
+              하이엔드짐 헬스&PT 왕십리점
               <br />
-              노하우가 녹아있는 공간
+              당신이 경험하게 될 하이엔드 트레이닝 서비스
             </p>
           </div>
 
           <div>
-            <h4 className="text-cream font-semibold text-sm mb-3">지점 안내</h4>
-            <div className="space-y-2 text-cream/40 text-sm">
-              <p>동일점 @highendgym_gang</p>
-              <p>수유점 @highendgym_suyu</p>
+            <h4 className="text-gold font-semibold text-sm mb-3">안내</h4>
+            <div className="space-y-2 text-white text-sm">
+              <p>서울특별시 성동구 왕십리로 257, 칠성빌딩</p>
+              <p>평일 06:00 ~ 24:00</p>
+              <p>주말 &amp; 공휴일 10:00 ~ 20:00</p>
+              <p>매월 둘째주 일요일 공식 휴무일</p>
             </div>
           </div>
 
           <div>
-            <h4 className="text-cream font-semibold text-sm mb-3">소셜 미디어</h4>
+            <h4 className="text-gold font-semibold text-sm mb-3">
+              하이엔드짐 오피셜 SNS
+            </h4>
             <div className="space-y-2 text-sm">
               <a
-                href={BRAND.instagram.personal}
+                href="https://www.instagram.com/highendgym_wang/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream/40 hover:text-gold transition-colors block"
+                className="text-white hover:text-gold transition-colors block"
               >
-                Instagram @cap_ahnmerica
+                Instagram @highendgym_wang
               </a>
               <a
-                href={BRAND.blog}
+                href="https://blog.naver.com/highend_fit/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream/40 hover:text-gold transition-colors block"
+                className="text-white hover:text-gold transition-colors block"
               >
-                네이버 블로그
+                네이버 블로그 blog.naver.com/highend_fit
+              </a>
+              <a
+                href="tel:02-3395-9777"
+                className="text-white hover:text-gold transition-colors block"
+              >
+                문의 전화: 02-3395-9777
               </a>
             </div>
           </div>

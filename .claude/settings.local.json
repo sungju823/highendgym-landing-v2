@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(nohup npm:*)",
+      "Bash(echo \"PID: $!\")",
+      "WebFetch(domain:landing-facility.vercel.app)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/images/reviews/review-1.png)",
+      "Bash(curl -s -I http://localhost:3000/images/reviews/review-1.png)",
+      "Bash(rm -f public/images/reviews/._review-*.png)",
+      "Bash(xattr -c public/images/reviews/review-*.png)",
+      "Bash(npx shadcn@latest add https://21st.dev/r/lavikatiyar/hero-section)",
+      "Bash(jobs -l)",
+      "Bash(npx next:*)"
+    ]
+  }
+}

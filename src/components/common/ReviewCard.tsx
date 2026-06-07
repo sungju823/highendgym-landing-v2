@@ -1,51 +1,73 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 interface ReviewCardProps {
-  name: string;
-  age: number;
-  job: string;
+  reviewer: string;
   badge: string;
   quote: string;
-  result: string;
+  highlight?: string;
+  image?: string;
   delay?: number;
 }
 
 export default function ReviewCard({
-  name,
-  age,
-  job,
+  reviewer,
   badge,
   quote,
-  result,
+  highlight,
+  image,
   delay = 0,
 }: ReviewCardProps) {
+  const renderQuote = () => {
+    if (!highlight) {
+      return <>&ldquo;{quote}&rdquo;</>;
+    }
+
+    const idx = quote.indexOf(highlight);
+    if (idx === -1) {
+      return <>&ldquo;{quote}&rdquo;</>;
+    }
+
+    const before = quote.slice(0, idx);
+    const after = quote.slice(idx + highlight.length);
+
+    return (
+      <>
+        &ldquo;{before}
+        <span className="text-white font-medium">{highlight}</span>
+        {after}&rdquo;
+      </>
+    );
+  };
+
   return (
     <ScrollReveal delay={delay}>
-      <div className="bg-navy-light border border-gold/20 rounded-xl p-6 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(184,154,94,0.1)] transition-all duration-300">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold">
-            {name.charAt(0)}
+      <div className="bg-navy border border-gold/20 rounded-xl overflow-hidden hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(180,154,109,0.1)] transition-all duration-300 h-full flex flex-col">
+        {/* 리뷰 사진 */}
+        {image && (
+          <div className="relative w-full aspect-square overflow-hidden">
+            <Image
+              src={image}
+              alt={`${reviewer} 네이버 리뷰`}
+              fill
+              className="object-cover object-top scale-[1.05]"
+            />
           </div>
-          <div>
-            <div className="text-cream font-medium text-sm">
-              {name}, {age}세, {job}
-            </div>
-            <Badge
-              variant="outline"
-              className="border-gold/30 text-gold text-xs mt-1"
-            >
+        )}
+
+        {/* 리뷰 텍스트 */}
+        <div className="p-5 flex flex-col flex-1">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="bg-gold/10 text-gold text-[10px] font-bold px-2 py-1 rounded">
               {badge}
-            </Badge>
+            </span>
+            <span className="text-white text-xs">{reviewer}</span>
           </div>
-        </div>
-        <p className="text-cream/80 text-sm leading-relaxed mb-4 font-[family-name:var(--font-gmarket)]">
-          &ldquo;{quote}&rdquo;
-        </p>
-        <div className="border-t border-gold/10 pt-3">
-          <span className="text-gold text-xs font-bold">{result}</span>
+          <p className="text-cream/50 text-sm leading-relaxed flex-1 min-h-[280px] md:min-h-[300px]">
+            {renderQuote()}
+          </p>
         </div>
       </div>
     </ScrollReveal>
