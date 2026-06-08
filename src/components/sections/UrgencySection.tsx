@@ -143,14 +143,17 @@ export default function UrgencySection() {
                 </p>
               </div>
 
-              {/* 5개월 */}
-              <div className="bg-navy-light border border-white/5 rounded-xl p-5">
+              {/* 5+1개월 (6월 한정 이벤트) */}
+              <div className="bg-navy-light border border-gold/30 rounded-xl p-5">
+                <span className="inline-block bg-gold/15 text-gold text-xs font-semibold px-2 py-0.5 rounded-full mb-2">
+                  6월 한정 이벤트 · 5+1개월 진행중!
+                </span>
                 <p className="text-cream/80 text-sm mb-1">
                   한 학기동안 열심히 해볼 대학생에게 추천!
                 </p>
                 <div className="flex items-end justify-between">
                   <span className="text-cream font-bold text-2xl md:text-3xl">
-                    5개월
+                    5+1개월
                   </span>
                   <div className="text-right flex items-end gap-2">
                     <span className="text-cream/40 text-base line-through">
