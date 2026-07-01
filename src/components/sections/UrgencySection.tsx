@@ -1,8 +1,6 @@
 "use client";
 
 import { FAQ_ITEMS } from "@/lib/constants";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Progress } from "@/components/ui/progress";
 import {
   Collapsible,
   CollapsibleContent,
@@ -11,7 +9,6 @@ import {
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import ScrollReveal from "@/components/common/ScrollReveal";
-import GoldDivider from "@/components/common/GoldDivider";
 
 function FaqItem({
   question,
@@ -46,36 +43,54 @@ export default function UrgencySection() {
   return (
     <section className="py-20 md:py-32 px-4">
       <div className="max-w-4xl mx-auto">
+        {/* 7월 한정 이벤트 */}
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-4xl lg:text-5xl font-bold text-cream leading-tight mb-6">
-              혹시 이런 생각이 드시나요?
-            </h2>
-            <GoldDivider className="mb-6" />
-            <p className="text-cream/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-              &ldquo;지금 당장 시작하긴 좀...&rdquo; &ldquo;PT는 아직 자신 없어서...&rdquo;
-              <br />
-              그 망설임, 저희가 가장 많이 들어본 말입니다.
-              <br />
-              아래에서 확인해보세요.
-            </p>
-          </div>
-        </ScrollReveal>
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <span className="inline-block bg-[#EBC15E] text-navy text-xs font-bold px-3 py-1 rounded-full mb-3 shadow-[0_0_20px_rgba(235,193,94,0.4)]">
+                7월에만 진행하는 이벤트
+              </span>
+              <h3 className="font-[family-name:var(--font-heading)] text-cream font-bold text-2xl md:text-3xl">
+                여름, 지금 시작하세요
+              </h3>
+            </div>
 
-        {/* Remaining slots alert */}
-        <ScrollReveal>
-          <div className="mb-12">
-            <Alert className="bg-navy-light border-gold/20 max-w-sm mx-auto">
-              <AlertDescription className="text-center">
-                <span className="text-cream/60 text-sm block mb-2">
-                  이번 달 신규 모집
-                </span>
-                <Progress value={70} className="h-2 mb-2 [&>div]:bg-gold" />
-                <span className="text-gold font-bold text-sm">
-                  7자리 남았습니다
-                </span>
-              </AlertDescription>
-            </Alert>
+            <div className="space-y-4 max-w-2xl mx-auto">
+              {/* 7개월 시설이용권 */}
+              <div className="bg-navy-light border-2 border-[#EBC15E] rounded-2xl p-6 shadow-[0_0_40px_rgba(235,193,94,0.25)]">
+                <p className="text-[#EBC15E] text-xl md:text-2xl font-bold mb-1">
+                  내년 2월까지 이용하자!
+                </p>
+                <p className="text-cream text-base md:text-lg font-medium mb-3">
+                  7월에는 7개월 시설이용권
+                </p>
+                <div className="flex items-end justify-end gap-2">
+                  <span className="text-[#EBC15E] font-bold text-3xl md:text-4xl drop-shadow-[0_0_12px_rgba(235,193,94,0.35)]">
+                    300,000
+                  </span>
+                  <span className="text-cream/70 text-sm">원</span>
+                </div>
+              </div>
+
+              {/* 여름시작 2개월 패키지 */}
+              <div className="bg-navy-light border-2 border-[#EBC15E] rounded-2xl p-6 shadow-[0_0_40px_rgba(235,193,94,0.25)]">
+                <p className="text-[#EBC15E] text-xl md:text-2xl font-bold mb-1">
+                  여름시작 2개월 패키지
+                </p>
+                <p className="text-cream text-base md:text-lg font-medium mb-3">
+                  PT 15회 + 시설이용권 2개월 (락카&운동복 포함)
+                </p>
+                <div className="flex items-end justify-end gap-2">
+                  <span className="text-[#EBC15E] font-bold text-3xl md:text-4xl drop-shadow-[0_0_12px_rgba(235,193,94,0.35)]">
+                    990,000
+                  </span>
+                  <span className="text-cream/70 text-sm">원</span>
+                </div>
+                <p className="text-cream/50 text-xs mt-3 text-right">
+                  * 하이엔드짐에 처음 등록하는 신규 회원 한정 상품입니다.
+                </p>
+              </div>
+            </div>
           </div>
         </ScrollReveal>
 
@@ -143,17 +158,17 @@ export default function UrgencySection() {
                 </p>
               </div>
 
-              {/* 5+1개월 (6월 한정 이벤트) */}
+              {/* 5개월 */}
               <div className="bg-navy-light border border-gold/30 rounded-xl p-5">
                 <span className="inline-block bg-gold/15 text-gold text-xs font-semibold px-2 py-0.5 rounded-full mb-2">
-                  6월 한정 이벤트 · 5+1개월 진행중!
+                  하루 이용료 1,000원대
                 </span>
                 <p className="text-cream/80 text-sm mb-1">
                   한 학기동안 열심히 해볼 대학생에게 추천!
                 </p>
                 <div className="flex items-end justify-between">
                   <span className="text-cream font-bold text-2xl md:text-3xl">
-                    5+1개월
+                    5개월
                   </span>
                   <div className="text-right flex items-end gap-2">
                     <span className="text-cream/40 text-base line-through">
