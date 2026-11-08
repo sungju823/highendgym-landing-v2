@@ -43,52 +43,52 @@ export default function UrgencySection() {
   return (
     <section className="py-20 md:py-32 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* 7월 한정 이벤트 */}
+        {/* 10월 한정 이벤트 */}
         <ScrollReveal>
           <div className="mb-16">
             <div className="text-center mb-8">
               <span className="inline-block bg-[#EBC15E] text-navy text-xs font-bold px-3 py-1 rounded-full mb-3 shadow-[0_0_20px_rgba(235,193,94,0.4)]">
-                7월에만 진행하는 이벤트
+                10월에만 진행하는 이벤트
               </span>
               <h3 className="font-[family-name:var(--font-heading)] text-cream font-bold text-2xl md:text-3xl">
-                여름, 지금 시작하세요
+                가을, 지금 시작하세요
               </h3>
             </div>
 
             <div className="space-y-4 max-w-2xl mx-auto">
-              {/* 7개월 시설이용권 */}
+              {/* 10월 혜택 01 — 시설이용권 4개월 */}
               <div className="bg-navy-light border-2 border-[#EBC15E] rounded-2xl p-6 shadow-[0_0_40px_rgba(235,193,94,0.25)]">
                 <p className="text-[#EBC15E] text-xl md:text-2xl font-bold mb-1">
-                  내년 2월까지 이용하자!
+                  10월 혜택 01. 시설이용권 4개월
                 </p>
                 <p className="text-cream text-base md:text-lg font-medium mb-3">
-                  7월에는 7개월 시설이용권
+                  내년 1월까지 사용 가능
                 </p>
                 <div className="flex items-end justify-end gap-2">
                   <span className="text-[#EBC15E] font-bold text-3xl md:text-4xl drop-shadow-[0_0_12px_rgba(235,193,94,0.35)]">
-                    300,000
+                    220,000
                   </span>
                   <span className="text-cream/70 text-sm">원</span>
                 </div>
               </div>
 
-              {/* 여름시작 2개월 패키지 */}
+              {/* 10월 혜택 02 — PT 15회 + 시설이용권 2개월 */}
               <div className="bg-navy-light border-2 border-[#EBC15E] rounded-2xl p-6 shadow-[0_0_40px_rgba(235,193,94,0.25)]">
                 <p className="text-[#EBC15E] text-xl md:text-2xl font-bold mb-1">
-                  여름시작 2개월 패키지
+                  10월 혜택 02. PT 15회 + 시설이용권 2개월
                 </p>
                 <p className="text-cream text-base md:text-lg font-medium mb-3">
-                  PT 15회 + 시설이용권 2개월 (락카&운동복 포함)
+                  선착순 5명 한정
                 </p>
-                <div className="flex items-end justify-end gap-2">
+                <div className="flex flex-wrap items-end justify-end gap-x-2 gap-y-1">
+                  <span className="text-cream/40 text-base md:text-lg line-through">
+                    1,250,000원
+                  </span>
                   <span className="text-[#EBC15E] font-bold text-3xl md:text-4xl drop-shadow-[0_0_12px_rgba(235,193,94,0.35)]">
                     990,000
                   </span>
                   <span className="text-cream/70 text-sm">원</span>
                 </div>
-                <p className="text-cream/50 text-xs mt-3 text-right">
-                  * 하이엔드짐에 처음 등록하는 신규 회원 한정 상품입니다.
-                </p>
               </div>
             </div>
           </div>
@@ -159,10 +159,7 @@ export default function UrgencySection() {
               </div>
 
               {/* 5개월 */}
-              <div className="bg-navy-light border border-gold/30 rounded-xl p-5">
-                <span className="inline-block bg-gold/15 text-gold text-xs font-semibold px-2 py-0.5 rounded-full mb-2">
-                  하루 이용료 1,000원대
-                </span>
+              <div className="bg-navy-light border border-white/5 rounded-xl p-5">
                 <p className="text-cream/80 text-sm mb-1">
                   한 학기동안 열심히 해볼 대학생에게 추천!
                 </p>
@@ -175,7 +172,7 @@ export default function UrgencySection() {
                       300,000원
                     </span>
                     <span className="text-gold font-bold text-2xl md:text-3xl">
-                      270,000
+                      250,000
                     </span>
                     <span className="text-cream/60 text-sm">원</span>
                   </div>
@@ -295,6 +292,21 @@ export default function UrgencySection() {
                 <span className="text-gold text-sm font-medium whitespace-nowrap ml-4">네이버 지도 →</span>
               </div>
             </a>
+
+            {/* 네이버 플레이스 바로가기 */}
+            <div className="mt-5 text-center">
+              <a
+                href="https://naver.me/FN7s4KXl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 min-h-[56px] px-8 border border-gold/40 text-gold font-semibold text-base rounded-md hover:bg-gold/10 transition-colors"
+              >
+                <span className="flex items-center justify-center w-5 h-5 rounded-[3px] bg-[#03C75A] text-white text-[11px] font-bold leading-none">
+                  N
+                </span>
+                네이버 지도로 보기 →
+              </a>
+            </div>
           </div>
         </ScrollReveal>
       </div>
