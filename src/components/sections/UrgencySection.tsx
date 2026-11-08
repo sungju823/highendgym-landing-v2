@@ -9,6 +9,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import ScrollReveal from "@/components/common/ScrollReveal";
+import { track } from "@/lib/track";
 
 function FaqItem({
   question,
@@ -272,6 +273,7 @@ export default function UrgencySection() {
             </p>
             <a
               href="https://naver.me/FN7s4KXl"
+              onClick={() => track("click_map", null)}
               target="_blank"
               rel="noopener noreferrer"
               className="block rounded-xl overflow-hidden border border-gold/20 hover:border-gold/40 transition-colors"
@@ -297,6 +299,7 @@ export default function UrgencySection() {
             <div className="mt-5 text-center">
               <a
                 href="https://naver.me/FN7s4KXl"
+                onClick={() => track("click_map", null)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 min-h-[56px] px-8 border border-gold/40 text-gold font-semibold text-base rounded-md hover:bg-gold/10 transition-colors"

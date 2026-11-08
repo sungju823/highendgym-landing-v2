@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { track } from "@/lib/track";
 
 export default function HeroSection() {
   const scrollToContact = () => {
+    track("click_consult_cta", null, { position: "hero" });
     document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
   };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -13,10 +13,18 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Check, Loader2 } from "lucide-react";
 import ScrollReveal from "@/components/common/ScrollReveal";
 import GoldDivider from "@/components/common/GoldDivider";
+import { track } from "@/lib/track";
 
 // Apps Script URL
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyftbTd65ugxt2lcHSrOw443uEN8siqzCKhG7Tiw2liqO0nLOwirbWPEopnubXTSJJK7A/exec";
+
+// 광고 추적용 관심사 값 (개인정보는 보내지 않음)
+const INTEREST_BY_PURPOSE: Record<string, string> = {
+  facility: "facility_only",
+  pt: "consider_pt",
+  undecided: "undecided",
+};
 
 export default function CtaSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -28,8 +36,17 @@ export default function CtaSection() {
   const [experience, setExperience] = useState("");
   const [message, setMessage] = useState("");
   const [agreed, setAgreed] = useState(false);
+  const formStarted = useRef(false);
 
   const isValid = name && phone && purpose && experience && agreed;
+
+  // 설문 입력칸을 처음 누르는 순간 한 번만 전송
+  const handleFormStart = (e: React.SyntheticEvent) => {
+    if (formStarted.current) return;
+    if ((e.target as HTMLElement).closest('button[type="submit"]')) return;
+    formStarted.current = true;
+    track("form_start", null);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,6 +64,9 @@ export default function CtaSection() {
       });
 
       setSubmitted(true);
+      track("form_submit", "Lead", {
+        interest: INTEREST_BY_PURPOSE[purpose] ?? "undecided",
+      });
     } catch {
       setError("전송에 실패했습니다. 잠시 후 다시 시도해주세요.");
     } finally {
@@ -97,6 +117,8 @@ export default function CtaSection() {
           <ScrollReveal>
             <form
               onSubmit={handleSubmit}
+              onFocusCapture={handleFormStart}
+              onPointerDownCapture={handleFormStart}
               className="bg-navy-light/60 border border-gold/40 rounded-xl p-6 md:p-8 space-y-5"
             >
               <p className="text-center text-gold text-sm font-medium mb-2">

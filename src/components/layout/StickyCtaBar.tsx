@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { track } from "@/lib/track";
 
 export default function StickyCtaBar() {
   const [visible, setVisible] = useState(false);
@@ -14,6 +15,7 @@ export default function StickyCtaBar() {
   }, []);
 
   const scrollToContact = () => {
+    track("click_consult_cta", null, { position: "sticky_bar" });
     document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
   };
 

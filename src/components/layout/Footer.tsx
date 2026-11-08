@@ -1,3 +1,7 @@
+"use client";
+
+import { track } from "@/lib/track";
+
 export default function Footer() {
   return (
     <footer className="bg-navy-dark border-t border-white/5 py-12 px-4">
@@ -31,6 +35,7 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <a
                 href="https://www.instagram.com/highendgym_wang/"
+                onClick={() => track("click_instagram", null)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gold transition-colors block"
@@ -39,6 +44,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://blog.naver.com/highend_fit/"
+                onClick={() => track("click_blog", null)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gold transition-colors block"
@@ -47,6 +53,7 @@ export default function Footer() {
               </a>
               <a
                 href="tel:02-3395-9777"
+                onClick={() => track("click_call", "Contact")}
                 className="text-white hover:text-gold transition-colors block"
               >
                 문의 전화: 02-3395-9777

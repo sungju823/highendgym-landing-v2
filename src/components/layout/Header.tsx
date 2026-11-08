@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { track } from "@/lib/track";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -12,6 +13,7 @@ export default function Header() {
   }, []);
 
   const scrollToContact = () => {
+    track("click_consult_cta", null, { position: "header" });
     document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -56,6 +58,7 @@ export default function Header() {
           {/* 인스타그램 */}
           <a
             href="https://www.instagram.com/highendgym_wang/"
+            onClick={() => track("click_instagram", null)}
             target="_blank"
             rel="noopener noreferrer"
             className="text-cream/60 hover:text-gold transition-colors"
@@ -70,6 +73,7 @@ export default function Header() {
           {/* 네이버 블로그 */}
           <a
             href="https://blog.naver.com/highend_fit"
+            onClick={() => track("click_blog", null)}
             target="_blank"
             rel="noopener noreferrer"
             className="text-cream/60 hover:text-gold transition-colors font-bold text-sm"
